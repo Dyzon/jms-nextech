@@ -180,12 +180,91 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 8. Active nav link: compare window.location.pathname to each href
+  // 8. Hero carousel (homepage): autoplay, dots/arrows, mouse-parallax float
+  const heroCarousel = document.getElementById('heroCarousel');
+  if (heroCarousel) {
+    const texts = heroCarousel.querySelectorAll('.hero-slide-text');
+    const images = heroCarousel.querySelectorAll('.hero-visual-img');
+    const dots = heroCarousel.querySelectorAll('.hero-dot');
+    const arrows = heroCarousel.querySelectorAll('.hero-arrow');
+    const total = texts.length;
+    let current = 0;
+    let autoplayTimer = null;
+
+    // Cinematic load-in reveal for hero text + floating visual
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        heroCarousel.querySelector('.hero-content')?.classList.add('loaded');
+        heroCarousel.querySelector('.hero-visual-wrap')?.classList.add('loaded');
+      });
+    });
+
+    const goTo = (index) => {
+      current = (index + total) % total;
+      texts.forEach(el => el.classList.toggle('active', Number(el.dataset.slide) === current));
+      images.forEach(el => el.classList.toggle('active', Number(el.dataset.slide) === current));
+      dots.forEach(el => {
+        const isActive = Number(el.dataset.slide) === current;
+        el.classList.toggle('active', isActive);
+        el.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+    };
+
+    const stopAutoplay = () => clearInterval(autoplayTimer);
+    const startAutoplay = () => {
+      stopAutoplay();
+      autoplayTimer = setInterval(() => goTo(current + 1), 5500);
+    };
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => { goTo(Number(dot.dataset.slide)); startAutoplay(); });
+    });
+    arrows.forEach(arrow => {
+      arrow.addEventListener('click', () => { goTo(current + Number(arrow.dataset.dir)); startAutoplay(); });
+    });
+
+    heroCarousel.addEventListener('mouseenter', stopAutoplay);
+    heroCarousel.addEventListener('mouseleave', startAutoplay);
+    heroCarousel.addEventListener('focusin', stopAutoplay);
+    heroCarousel.addEventListener('focusout', startAutoplay);
+    document.addEventListener('visibilitychange', () => {
+      document.hidden ? stopAutoplay() : startAutoplay();
+    });
+
+    startAutoplay();
+
+    // Mouse-parallax tilt on the floating visual card
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const visualCard = document.getElementById('heroVisualCard');
+    const visualWrap = heroCarousel.querySelector('.hero-visual-wrap');
+    if (visualCard && visualWrap && !reduceMotion) {
+      visualWrap.addEventListener('mousemove', (e) => {
+        const rect = visualCard.getBoundingClientRect();
+        const x = Math.min(Math.max((e.clientX - rect.left) / rect.width, 0), 1) - 0.5;
+        const y = Math.min(Math.max((e.clientY - rect.top) / rect.height, 0), 1) - 0.5;
+        visualCard.style.transform = `perspective(1000px) rotateY(${x * 12}deg) rotateX(${-y * 12}deg)`;
+      });
+      visualWrap.addEventListener('mouseleave', () => {
+        visualCard.style.transform = '';
+      });
+    }
+  }
+
+  // 9. Active nav link: compare window.location.pathname to each href
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-links a, .mobile-overlay-links > a').forEach(link => {
     const linkPath = link.getAttribute('href')?.split('/').pop();
     if (linkPath === currentPath) {
       link.classList.add('active');
+    }
+  });
+
+  // 10. Service card hover-arrow badge: navigates using the card's own "Learn more" link
+  document.querySelectorAll('.service-card').forEach(card => {
+    const arrow = card.querySelector('.card-hover-arrow');
+    const link = card.querySelector('.card-link');
+    if (arrow && link) {
+      arrow.addEventListener('click', () => { window.location.href = link.href; });
     }
   });
 });

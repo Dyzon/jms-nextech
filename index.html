@@ -18,7 +18,7 @@
 
 <nav class="site-nav" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="JMS Nextech" height="42"></a>
+    <a href="index.html" class="nav-logo"><img src="images/logo-transparent.png" alt="" height="42"><span class="nav-brand-name"><span class="fbn-jms">JMS</span> <span class="fbn-next">Next<span class="fbn-ech">ech</span></span></span></a>
 
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
@@ -86,59 +86,62 @@
 <main id="main">
 
 <!-- HERO -->
-<section class="hero" style="padding-top:0;">
-  <div class="hero-bg" style="background-image:url('images/hero/hero-bg.jpg');"></div>
+<section class="hero hero-carousel" id="heroCarousel" style="padding-top:0;" aria-roledescription="carousel" aria-label="Featured services">
+  <div class="hero-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
   <div class="hero-grid">
     <div class="hero-content">
-      <span class="eyebrow gradient-text">Trusted Security Partner — 10+ Years</span>
-      <h1>Advanced Security Solutions for a Safer Tomorrow</h1>
-      <p class="hero-lede">From CCTV and access control to AI surveillance and drone monitoring — JMS Nextech delivers end-to-end security integration tailored for businesses, government, and industrial clients across India.</p>
+      <div class="hero-slide-text-stack">
+        <div class="hero-slide-text active" data-slide="0">
+          <span class="eyebrow gradient-text">24/7 Intelligent Monitoring</span>
+          <h1>See Everything. Miss Nothing.</h1>
+          <p class="hero-lede">AI-powered HD CCTV with real-time alerts, cloud recording, and remote access — round-the-clock visibility across every site you manage.</p>
+        </div>
+        <div class="hero-slide-text" data-slide="1">
+          <span class="eyebrow gradient-text">Aerial Perimeter Security</span>
+          <h1>Security That Takes Flight</h1>
+          <p class="hero-lede">Drone-based surveillance with thermal imaging extends your perimeter coverage across large industrial sites and hard-to-reach terrain.</p>
+        </div>
+        <div class="hero-slide-text" data-slide="2">
+          <span class="eyebrow gradient-text">Biometric Access Control</span>
+          <h1>Only the Right People, Every Time</h1>
+          <p class="hero-lede">Fingerprint, RFID and mobile-credential access with multi-door management and detailed audit trails for total entry control.</p>
+        </div>
+      </div>
+
       <div class="hero-buttons">
         <a href="services.html" class="btn-gradient">Explore Services →</a>
-        <a href="contact.html" class="btn-outline">Get Free Consultation</a>
+        <a href="contact.html" class="btn-outline-dark">Get Free Consultation</a>
       </div>
       <div class="trust-strip">
         <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>10+ Years Experience</div>
         <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>150+ Projects</div>
         <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>99% Client Satisfaction</div>
       </div>
+
+      <div class="hero-carousel-controls">
+        <button class="hero-arrow" type="button" data-dir="-1" aria-label="Previous slide">‹</button>
+        <div class="hero-dots" role="tablist" aria-label="Slides">
+          <button class="hero-dot active" type="button" data-slide="0" role="tab" aria-selected="true" aria-label="Show CCTV monitoring slide"></button>
+          <button class="hero-dot" type="button" data-slide="1" role="tab" aria-selected="false" aria-label="Show drone surveillance slide"></button>
+          <button class="hero-dot" type="button" data-slide="2" role="tab" aria-selected="false" aria-label="Show access control slide"></button>
+        </div>
+        <button class="hero-arrow" type="button" data-dir="1" aria-label="Next slide">›</button>
+      </div>
     </div>
 
-    <div class="hero-card">
-      <svg class="network-diagram" viewBox="0 0 300 300" role="img" aria-label="Diagram of connected security network nodes surrounding a shield icon">
-        <g class="ring">
-          <line x1="150" y1="150" x2="150" y2="40" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="227" y2="73" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="260" y2="150" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="227" y2="227" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="150" y2="260" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="73" y2="227" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="40" y2="150" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <line x1="150" y1="150" x2="73" y2="73" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-          <circle cx="150" cy="40" r="8" fill="#E23434" class="node" style="animation-delay:0s"/>
-          <circle cx="227" cy="73" r="8" fill="#F2740D" class="node" style="animation-delay:0.3s"/>
-          <circle cx="260" cy="150" r="8" fill="#FFB627" class="node" style="animation-delay:0.6s"/>
-          <circle cx="227" cy="227" r="8" fill="#E23434" class="node" style="animation-delay:0.9s"/>
-          <circle cx="150" cy="260" r="8" fill="#F2740D" class="node" style="animation-delay:1.2s"/>
-          <circle cx="73" cy="227" r="8" fill="#FFB627" class="node" style="animation-delay:1.5s"/>
-          <circle cx="40" cy="150" r="8" fill="#E23434" class="node" style="animation-delay:1.8s"/>
-          <circle cx="73" cy="73" r="8" fill="#F2740D" class="node" style="animation-delay:2.1s"/>
-        </g>
-        <defs>
-          <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#E23434"/>
-            <stop offset="55%" stop-color="#F2740D"/>
-            <stop offset="100%" stop-color="#FFB627"/>
-          </linearGradient>
-        </defs>
-        <circle cx="150" cy="150" r="46" fill="#242424" stroke="rgba(232,103,10,0.3)" stroke-width="1.5"/>
-        <path d="M150 118l24 9v18c0 17-10 28-24 33-14-5-24-16-24-33v-18l24-9z" fill="url(#shieldGrad)"/>
-        <circle cx="150" cy="148" r="5" fill="#1A1A1A"/>
-        <path d="M150 152v8" stroke="#1A1A1A" stroke-width="4" stroke-linecap="round"/>
-      </svg>
-      <div style="text-align:center;">
-        <span class="hero-badge-strip">ISO Certified · Government Approved</span>
+    <div class="hero-visual-wrap">
+      <div class="hero-visual-float">
+        <div class="hero-visual-card" id="heroVisualCard">
+          <img class="hero-visual-img active" data-slide="0" src="images/hero/carousel-cctv.png" alt="Dome CCTV security camera">
+          <img class="hero-visual-img" data-slide="1" src="images/hero/carousel-drone.jpg" alt="Surveillance drone in flight over a forested site">
+          <img class="hero-visual-img" data-slide="2" src="images/hero/carousel-access.jpg" alt="Biometric fingerprint access scan">
+        </div>
       </div>
+      <span class="hero-visual-badge">ISO Certified · Government Approved</span>
     </div>
   </div>
 </section>
@@ -157,6 +160,7 @@
         <div class="card-img-wrap">
           <img src="images/services/cctv.jpg" alt="CCTV surveillance camera system" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 9V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2l4 3V6l-4 3z"/></svg></div>
@@ -170,6 +174,7 @@
         <div class="card-img-wrap">
           <img src="images/services/drone.jpg" alt="Aerial drone conducting site surveillance" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.5"/><path d="M12 9.5V6M12 14.5V18M9.5 12H6M14.5 12H18"/><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="18" r="2"/></svg></div>
@@ -183,6 +188,7 @@
         <div class="card-img-wrap">
           <img src="images/services/fire-alarm.jpg" alt="Fire alarm and fire fighting safety equipment" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3-3 4-3 7a3 3 0 0 0 6 0c0-1-1-2-1-2s2 1 2 4a5 5 0 0 1-10 0c0-5 4-6 4-9z"/></svg></div>
@@ -196,6 +202,7 @@
         <div class="card-img-wrap">
           <img src="images/services/cyber-security.jpg" alt="Cyber security analyst monitoring network threats on multiple screens" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8.5-7 10-4-1.5-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></div>
@@ -209,6 +216,7 @@
         <div class="card-img-wrap">
           <img src="images/services/access-control.jpg" alt="Biometric access control fingerprint scanner" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
@@ -222,6 +230,7 @@
         <div class="card-img-wrap">
           <img src="images/services/anpr.jpg" alt="Automatic number plate recognition camera capturing vehicle" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13l1.5-4.5A2 2 0 0 1 6.4 7h11.2a2 2 0 0 1 1.9 1.5L21 13"/><rect x="2" y="13" width="20" height="5" rx="1.5"/><circle cx="6.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg></div>
@@ -235,6 +244,7 @@
         <div class="card-img-wrap">
           <img src="images/services/traffic.jpg" alt="City traffic management and signal control" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="16" rx="3"/><circle cx="12" cy="6" r="1"/><circle cx="12" cy="10" r="1"/><circle cx="12" cy="14" r="1"/><path d="M9 20h6"/></svg></div>
@@ -248,6 +258,7 @@
         <div class="card-img-wrap">
           <img src="images/services/building-management.jpg" alt="Modern office building with integrated building management systems" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="10" height="18"/><rect x="14" y="9" width="6" height="12"/><path d="M7 7h1M10 7h1M7 11h1M10 11h1M7 15h1M10 15h1"/></svg></div>
@@ -261,6 +272,7 @@
         <div class="card-img-wrap">
           <img src="images/services/pa-system.jpg" alt="Public address speaker system installation" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4h4l5 4V6l-5 4H3z"/><path d="M16 9a4 4 0 0 1 0 6"/><path d="M19 7a8 8 0 0 1 0 10"/></svg></div>
@@ -274,6 +286,7 @@
         <div class="card-img-wrap">
           <img src="images/services/ai-solutions.jpg" alt="AI chip powering intelligent surveillance analytics" loading="lazy" width="400" height="220">
           <div class="card-img-overlay"></div>
+          <span class="card-hover-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></span>
         </div>
         <div class="card-body">
           <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 4.5l-2 2M4.5 19.5l2-2M17.5 19.5l-2-2"/></svg></div>
@@ -287,7 +300,7 @@
 </section>
 
 <!-- WHY CHOOSE US -->
-<section class="section-dark">
+<section class="section-surf">
   <div class="why-us-grid">
     <div class="why-us-image animate-on-scroll">
       <img src="images/hero/why-us.jpg" alt="JMS Nextech engineer inspecting security installation" loading="lazy" width="600" height="500">
@@ -369,13 +382,13 @@
 </section>
 
 <!-- CTA BANNER -->
-<section class="section-dark">
-  <div class="cta-card animate-on-scroll">
-    <h2>Ready to secure your premises?</h2>
-    <p>Get a free no-obligation site assessment from our expert team.</p>
+<section class="section-light">
+  <div class="cta-card animate-on-scroll" style="border:1px solid var(--border-light); background:var(--light-surf);">
+    <h2 style="color:var(--text-light);">Ready to secure your premises?</h2>
+    <p style="color:var(--text-body);">Get a free no-obligation site assessment from our expert team.</p>
     <div class="cta-buttons">
       <a href="contact.html" class="btn-gradient">Get Free Quote →</a>
-      <a href="tel:+911234567890" class="btn-outline-light">📞 Call Us Now</a>
+      <a href="tel:+911234567890" class="btn-outline-dark">📞 Call Us Now</a>
     </div>
   </div>
 </section>
@@ -385,7 +398,10 @@
 <footer class="site-footer">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="images/logo.png" alt="JMS Nextech" loading="lazy">
+      <div class="footer-logo-row">
+        <img src="images/logo-transparent.png" alt="JMS Nextech" loading="lazy">
+        <span class="footer-brand-name"><span class="fbn-jms">JMS</span> <span class="fbn-next">Next<span class="fbn-ech">ech</span></span></span>
+      </div>
       <p>Your trusted partner in comprehensive security and technology solutions.</p>
       <div class="social-row">
         <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.7H5.67v7.64h2.67zM7 9.5a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 8.84v-4.36c0-2.33-1.24-3.42-2.9-3.42-1.34 0-1.94.74-2.27 1.26v-1.08h-2.67c.04.75 0 7.6 0 7.6h2.67v-4.25c0-.23.02-.45.08-.62.19-.45.6-.92 1.3-.92.92 0 1.29.7 1.29 1.72v4.07h2.5z"/></svg></a>
