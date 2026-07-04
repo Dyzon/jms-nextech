@@ -3,14 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | JMS Nextech</title>
-<meta name="description" content="Talk to JMS Nextech's security experts. Request a free, no-obligation site assessment for CCTV, access control, fire alarm and more.">
-<meta property="og:title" content="Contact JMS Nextech">
-<meta property="og:description" content="Let's secure your premises together. Free assessment, no obligation.">
+<title>Our Clients & Partners | JMS Nextech</title>
+<meta name="description" content="Meet the clients and business partners who trust JMS Nextech for comprehensive security solutions across India and globally.">
+<meta property="og:title" content="Our Clients & Partners | JMS Nextech">
+<meta property="og:description" content="Trusted by leading organizations across India and the globe.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.clients-section { padding: 60px 0; }
+.clients-section h2 { margin-bottom: 40px; text-align: center; }
+.clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; align-items: center; justify-items: center; margin-bottom: 60px; }
+.client-logo-card { background: var(--light-surf); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 30px; display: flex; align-items: center; justify-content: center; min-height: 150px; text-align: center; transition: var(--transition); }
+.client-logo-card:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+.client-logo-card.dark { background: var(--card-bg); border-color: var(--border-dark); }
+.client-name { font-size: 14px; font-weight: 600; color: var(--text-light); margin-top: 12px; }
+.client-logo-card.dark .client-name { color: var(--text-dark); }
+.client-logo-placeholder { width: 120px; height: 80px; background: linear-gradient(135deg, #E23434 0%, #F2740D 55%, #FFB627 100%); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12px; font-weight: 600; text-align: center; padding: 10px; }
+</style>
 </head>
 <body>
 
@@ -40,8 +51,8 @@
           <a href="services/ai-solutions.html" role="menuitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 4.5l-2 2M4.5 19.5l2-2M17.5 19.5l-2-2"/></svg>AI-Based Solutions</a>
         </div>
       </div>
-      <a href="clients.html">Clients</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="clients.html" class="active">Clients</a>
+      <a href="contact.html">Contact</a>
     </div>
     <a href="contact.html" class="btn-gradient nav-cta">Get Free Quote</a>
     <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
@@ -86,161 +97,196 @@
   <div class="hero-bg" style="background-image:url('images/hero/hero-bg.jpg');"></div>
   <div class="hero-grid">
     <div class="hero-content">
-      <span class="eyebrow gradient-text">Contact Us</span>
-      <h1>Let's secure your premises together</h1>
-      <p class="hero-lede">Talk to our experts. Free assessment, no obligation.</p>
+      <span class="eyebrow gradient-text">Our Clients & Partners</span>
+      <h1>Trusted by Leading Organizations</h1>
+      <p class="hero-lede">From innovative startups to Fortune 500 companies, government agencies, and industrial enterprises — organizations across India and globally rely on JMS Nextech for comprehensive, mission-critical security solutions.</p>
     </div>
   </div>
 </section>
 
-<section class="section-light">
-  <div class="contact-grid">
-
-    <div class="contact-form-card animate-on-scroll">
-      <h2 style="font-size:22px; margin-bottom:6px;">Request a Free Quote</h2>
-      <p style="margin-bottom:24px;">Fill in your details and our team will get back to you within 24 hours.</p>
-
-      <!--
-        Get your free Web3Forms access key at https://web3forms.com
-        and replace YOUR_WEB3FORMS_KEY below. No backend required.
-      -->
-      <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-        <input type="hidden" name="subject" value="New JMS Nextech Enquiry">
-        <input type="checkbox" name="botcheck" style="display:none">
-
-        <div class="form-row two-col">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="first_name" required>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="last_name" required>
-          </div>
-        </div>
-
-        <div class="form-row two-col">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-        </div>
-
-        <div class="form-row two-col">
-          <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company">
-          </div>
-          <div class="form-group">
-            <label for="city">City</label>
-            <input type="text" id="city" name="city">
-          </div>
-        </div>
-
-        <div class="form-group" style="margin-bottom:16px;">
-          <label>Services interested in</label>
-          <div class="checkbox-grid">
-            <label class="checkbox-item"><input type="checkbox" name="services" value="CCTV Monitoring">CCTV Monitoring</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Drone Surveillance">Drone Surveillance</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Fire Alarm & Fighting">Fire Alarm & Fighting</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Cyber Security">Cyber Security</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Access Control Systems">Access Control Systems</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="ANPR Solutions">ANPR Solutions</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Traffic Management">Traffic Management</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Building Management (IBMS)">Building Management (IBMS)</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="Public Address System">Public Address System</label>
-            <label class="checkbox-item"><input type="checkbox" name="services" value="AI-Based Solutions">AI-Based Solutions</label>
-          </div>
-        </div>
-
-        <div class="form-group" style="margin-bottom:16px;">
-          <label for="budget">Budget range</label>
-          <select id="budget" name="budget">
-            <option value="">Select a budget range</option>
-            <option value="Under ₹5L">Under ₹5L</option>
-            <option value="₹5L–₹15L">₹5L–₹15L</option>
-            <option value="₹15L–₹50L">₹15L–₹50L</option>
-            <option value="₹50L–₹1Cr">₹50L–₹1Cr</option>
-            <option value="Above ₹1Cr">Above ₹1Cr</option>
-          </select>
-        </div>
-
-        <div class="form-group" style="margin-bottom:20px;">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us about your project or requirement..."></textarea>
-        </div>
-
-        <button type="submit" class="btn-gradient" style="width:100%;">Send Message →</button>
-        <p class="form-note">🔒 Your data is secure. We never share your information.</p>
-      </form>
-
-      <div class="form-success" id="formSuccess">
-        <div class="check-circle">✓</div>
-        <h3>Thank you — message sent!</h3>
-        <p>Our team will get back to you within 24 hours.</p>
-      </div>
-    </div>
-
-    <div class="contact-info animate-on-scroll">
-      <div class="trust-stat-row">
-        <div class="trust-stat-card"><div class="num">10+</div><div class="lbl">Years</div></div>
-        <div class="trust-stat-card"><div class="num">150</div><div class="lbl">Projects</div></div>
-        <div class="trust-stat-card"><div class="num">99%</div><div class="lbl">Satisfaction</div></div>
-      </div>
-
-      <div class="info-card-dark">
-        <div class="info-row">
-          <div class="info-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
-          <div><div class="lbl">Address</div><div class="val">4th Floor, Prestige Tech Park, Bengaluru, Karnataka 560103, India</div></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div><div class="lbl">Phone</div><div class="val">+91 12345 67890</div></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
-          <div><div class="lbl">Email</div><div class="val">info@jmsnextech.com</div></div>
-        </div>
-        <div class="info-row">
-          <div class="info-icon-box"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <div><div class="lbl">Hours</div><div class="val">Mon–Sat 9AM–6PM</div></div>
+<!-- OUR CLIENTS -->
+<section class="section-light clients-section">
+  <div class="container">
+    <h2>Our Clients</h2>
+    <p style="text-align:center; margin-bottom:40px; color:var(--text-body);">Leading organizations across India trust us for their security needs.</p>
+    <div class="clients-grid">
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">TechCorp India</div>
+          <div class="client-name">TechCorp India</div>
         </div>
       </div>
-
-      <div class="map-card">
-        <div class="map-card-header">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.5-7-11a7 7 0 0 1 14 0c0 4.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-          <div>
-            <div class="title">Find us on the map</div>
-            <div class="addr">4th Floor, Prestige Tech Park, Bengaluru, Karnataka 560103</div>
-          </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">FinanceHub Ltd</div>
+          <div class="client-name">FinanceHub Ltd</div>
         </div>
-        <!--
-          HOW TO GET YOUR MAP EMBED URL:
-          1. Go to maps.google.com
-          2. Search your exact address
-          3. Click Share → Embed a map
-          4. Copy the src="" URL from the iframe code
-          5. Paste it below — no API key needed
-        -->
-        <iframe
-          src="https://www.google.com/maps?q=Prestige%20Tech%20Park%20Bengaluru&output=embed"
-          width="100%" height="300" style="border:0" allowfullscreen
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="JMS Nextech office location">
-        </iframe>
-        <div class="map-actions">
-          <a href="https://maps.google.com/?q=Prestige+Tech+Park+Bengaluru" target="_blank" rel="noopener" class="btn-outline-dark">Get Directions</a>
-          <a href="https://maps.google.com/?q=Prestige+Tech+Park+Bengaluru" target="_blank" rel="noopener" class="btn-outline-dark">Open in Maps</a>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">MediCare Hospital</div>
+          <div class="client-name">MediCare Hospital</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Retail Solutions Pvt</div>
+          <div class="client-name">Retail Solutions Pvt</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Industrial Park Group</div>
+          <div class="client-name">Industrial Park Group</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Logistics Express</div>
+          <div class="client-name">Logistics Express</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Premium Hotels Chain</div>
+          <div class="client-name">Premium Hotels Chain</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Education Networks</div>
+          <div class="client-name">Education Networks</div>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
+<!-- GLOBAL CLIENTS -->
+<section class="section-dark clients-section">
+  <div class="container">
+    <h2 style="color:var(--text-dark);">Global Clients</h2>
+    <p style="text-align:center; margin-bottom:40px; color:var(--text-muted);">Security solutions trusted by international organizations across multiple continents.</p>
+    <div class="clients-grid">
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">Global Tech Solutions</div>
+          <div class="client-name">Global Tech Solutions</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">International Banking Corp</div>
+          <div class="client-name">International Banking Corp</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">Multi-National Industries</div>
+          <div class="client-name">Multi-National Industries</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">European Trading Ltd</div>
+          <div class="client-name">European Trading Ltd</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">Asia-Pacific Networks</div>
+          <div class="client-name">Asia-Pacific Networks</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">Middle East Enterprises</div>
+          <div class="client-name">Middle East Enterprises</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">Americas Supply Chain</div>
+          <div class="client-name">Americas Supply Chain</div>
+        </div>
+      </div>
+      <div class="client-logo-card dark">
+        <div>
+          <div class="client-logo-placeholder">African Tech Initiatives</div>
+          <div class="client-name">African Tech Initiatives</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUSINESS PARTNERS -->
+<section class="section-light clients-section">
+  <div class="container">
+    <h2>Business Partners</h2>
+    <p style="text-align:center; margin-bottom:40px; color:var(--text-body);">Strategic partnerships with leading technology and security vendors.</p>
+    <div class="clients-grid">
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Surveillance Tech Leader</div>
+          <div class="client-name">Surveillance Tech Leader</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Access Control Innovators</div>
+          <div class="client-name">Access Control Innovators</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">AI Analytics Partner</div>
+          <div class="client-name">AI Analytics Partner</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Network Infrastructure Pro</div>
+          <div class="client-name">Network Infrastructure Pro</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Cloud Security Experts</div>
+          <div class="client-name">Cloud Security Experts</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">IoT Solutions Providers</div>
+          <div class="client-name">IoT Solutions Providers</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Fire Safety Compliance</div>
+          <div class="client-name">Fire Safety Compliance</div>
+        </div>
+      </div>
+      <div class="client-logo-card">
+        <div>
+          <div class="client-logo-placeholder">Integration Services Ltd</div>
+          <div class="client-name">Integration Services Ltd</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section-dark">
+  <div class="cta-card animate-on-scroll">
+    <h2>Join Our Network of Trusted Partners</h2>
+    <p>Whether you're a potential client looking for security solutions or a vendor interested in partnership opportunities, we'd love to connect.</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-gradient">Get in Touch →</a>
+      <a href="about.html" class="btn-outline-light">Learn Our Story</a>
+    </div>
   </div>
 </section>
 
