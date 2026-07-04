@@ -193,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
-        alert('There was an error sending your message. Please try again or call us directly.');
+        alert('There was an error sending your message. Please call us at +91 12345 67890 or email info@jmsnextech.com and we\'ll get back to you right away.');
       }
     });
   }
