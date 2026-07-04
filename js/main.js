@@ -5,6 +5,24 @@
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.querySelector('nav.site-nav');
 
+  // 0. Theme toggle (dark/light mode), persisted + system-preference-aware
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    const applyTheme = (theme) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+    themeToggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(current === 'dark' ? 'light' : 'dark');
+    });
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      }
+    });
+  }
+
   // 1. Sticky nav shadow on scroll
   if (nav) {
     const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 80);
