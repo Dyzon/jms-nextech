@@ -40,12 +40,17 @@ There is no templating/includes system. The full site nav (including the 10-item
 "Services" menu), mobile overlay menu, and footer (with the same 10 service links, contact info,
 and social links) are copy-pasted verbatim into every single HTML file. Any change to navigation
 items, footer content, contact details, or the services list must be manually replicated across
-**all** HTML files (currently 15: 5 root pages + `services.html` + 10 files under `services/`).
+**all** HTML files (currently 14: `index.html`, `about.html`, `contact.html`, `services.html` +
+10 files under `services/`).
 Search across the whole tree (not just the file you're editing) when making these changes.
 
-**Note**: The navigation now includes "Clients" (linking to `clients.html`) in place of the former
-"Blog" link. The homepage blog preview section has been removed and replaced with a full-page
-`clients.html` showcasing Our Clients, Global Clients, and Business Partners in category grids.
+**Note**: There is no "Blog" or "Clients" nav item (both removed; no `clients.html`). The primary
+nav/CTA button reads "Enquire Now". The fire service is titled "Fire Alarm & Intrusion Protection"
+everywhere. The homepage hero is a JS-driven carousel (`#heroCarousel` in `js/main.js`) with 4
+slides (CCTV, Drone, Access Control, Video Analytics with AI) — each slide needs a matching
+`.hero-slide-text[data-slide]`, `.hero-dot[data-slide]`, and `.hero-visual-img[data-slide]`; the JS
+counts slides dynamically. After "Why Choose Us" the homepage has a "Global Partners" auto-scrolling
+logo marquee (`.partners-marquee` in `css/style.css`).
 
 ## Service page template
 

@@ -435,13 +435,13 @@ nav.site-nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.32), 0 1px 0 rgba(24
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 100vh;
+  min-height: 86vh;
   display: flex;
   align-items: center;
   background: var(--dark-bg);
   color: #fff;
   overflow: hidden;
-  padding: 120px 5% 80px;
+  padding: 112px 5% 64px;
 }
 .hero-bg {
   position: absolute;
@@ -592,7 +592,7 @@ nav.site-nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.32), 0 1px 0 rgba(24
 }
 .hero-visual-card {
   position: relative;
-  width: min(560px, 96vw);
+  width: min(440px, 88vw);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   background: rgba(255,255,255,0.35);
@@ -656,6 +656,42 @@ nav.site-nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.32), 0 1px 0 rgba(24
   .hero-visual-img { transition: opacity 0.3s ease; transform: none !important; }
   .hero-carousel .hero-content,
   .hero-visual-wrap { transition: none; opacity: 1; transform: none; }
+}
+
+/* ==========================================================================
+   Global Partners Marquee
+   ========================================================================== */
+.partners-section { padding-bottom: 56px; }
+.partners-marquee {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  animation: partners-scroll 32s linear infinite;
+}
+.partners-marquee:hover .partners-track { animation-play-state: paused; }
+.partner-logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-body);
+  white-space: nowrap;
+  opacity: 0.55;
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+.partner-logo:hover { color: var(--orange); opacity: 1; }
+@keyframes partners-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .partners-track { animation: none; flex-wrap: wrap; justify-content: center; }
 }
 
 /* Interior page hero (shorter) */
