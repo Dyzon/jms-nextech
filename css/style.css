@@ -435,13 +435,13 @@ nav.site-nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.32), 0 1px 0 rgba(24
    ========================================================================== */
 .hero {
   position: relative;
-  min-height: 86vh;
+  min-height: 74vh;
   display: flex;
   align-items: center;
   background: var(--dark-bg);
   color: #fff;
   overflow: hidden;
-  padding: 112px 5% 64px;
+  padding: 88px 5% 48px;
 }
 .hero-bg {
   position: absolute;
@@ -592,7 +592,7 @@ nav.site-nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.32), 0 1px 0 rgba(24
 }
 .hero-visual-card {
   position: relative;
-  width: min(440px, 88vw);
+  width: min(360px, 78vw);
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   background: rgba(255,255,255,0.35);
